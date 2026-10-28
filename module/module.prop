@@ -1,0 +1,6 @@
+id=hdr_badge
+name=HDR Badge (beekeeper 杜比/HDR弹标)
+version=v0.4
+versionCode=4
+author=WorkBuddy
+description=轮询系统画质模式(picture_mode/picture_mode_dolby)，检测到杜比视界(59)或HDR10(15)时在右上角弹对应标。任意播放器有效(VidHub等)。全静默，无图标无界面。

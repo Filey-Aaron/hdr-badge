@@ -1,0 +1,10 @@
+# 构建环境（700MB JDK/SDK，不入库）
+build-tools/
+
+# 构建产物
+*.idsig
+module/helper.apk
+
+# 系统文件
+Thumbs.db
+.DS_Store

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hdrbadge"
+    android:versionCode="2"
+    android:versionName="0.2">
+
+    <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="33" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:label="HDR Badge"
+        android:icon="@drawable/ic_launcher"
+        android:allowBackup="false">
+
+        <receiver
+            android:name=".BadgeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.hdrbadge.SHOW" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".BadgeService"
+            android:exported="false" />
+
+    </application>
+</manifest>

@@ -1,0 +1,14 @@
+#!/sbin/sh
+# Magisk 模块安装脚本
+SKIPUNZIP=0
+
+ui_print "- 安装 HDR Badge (beekeeper 杜比/HDR 弹标)"
+ui_print "- 设备: $(getprop ro.product.model)"
+
+if [ ! -f "$MODPATH/helper.apk" ]; then
+    ui_print "! 缺少 helper.apk，模块不完整"
+fi
+
+set_perm_recursive $MODPATH 0 0 0755 0644
+set_perm $MODPATH/service.sh 0 0 0755
+ui_print "- 完成，重启生效"
